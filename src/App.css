@@ -58,11 +58,24 @@
 .middle3,
 .bottom3 {
   border-radius: 10px;
-  width: 90px;
   background: black;
   height: 13%;
-  transition: 0.2s;
+  transition: 0.4s;
 }
-.topBun3 {
-  transform: rotate(360deg);
+.middle3 {
+  width: 110px;
+}
+.top3,
+.bottom3 {
+  width: 70px;
+}
+.topBun3,
+.bottomBun3 {
+  width: 110px;
+}
+.topBun3,
+.bottomBun3,
+.middleBun3 {
+  transition: 0.4s;
+  background-color: red;
 }

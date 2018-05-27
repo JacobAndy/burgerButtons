@@ -5,7 +5,8 @@ class App extends Component {
   state = {
     burgerFlag1: false,
     burgerFlag2: false,
-    burgerFlag3: false
+    burgerFlag3: false,
+    burgerFlag4: false
   };
   render() {
     return (
@@ -37,14 +38,25 @@ class App extends Component {
           />
         </div>
         <div
-          onClick={() =>
-            this.setState({ burgerFlag3: !this.state.burgerFlag3 })
-          }
+          onMouseEnter={() => {
+            this.setState({ burgerFlag3: true });
+          }}
+          onMouseLeave={() => {
+            this.setState({ burgerFlag3: false });
+          }}
           className="burger"
         >
-          <div className={this.state.burgerFlag3 ? "top3" : "top3 topBun3"} />
-          <div className={this.state.burgerFlag3 ? "middle3" : null} />
-          <div className={this.state.burgerFlag3 ? "bottom3" : null} />
+          <div className={!this.state.burgerFlag3 ? "top3" : "top3 topBun3"} />
+          <div
+            className={
+              !this.state.burgerFlag3 ? "middle3" : "middle3 middleBun3"
+            }
+          />
+          <div
+            className={
+              !this.state.burgerFlag3 ? "bottom3" : "bottom3 bottomBun3"
+            }
+          />
         </div>
       </div>
     );
